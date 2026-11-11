@@ -1,0 +1,121 @@
+/* =========== Fonts + Tokens =========== */
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+    font-weight: 400 600 700;
+    font-display: swap;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    --gray-700: hsl(0, 0%, 20%);
+    --gray-800: hsl(0, 0%, 12%);
+    --gray-900: hsl(0, 0%, 8%);
+}
+
+/* =========== Base =========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+    background-color: var(--gray-900);
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+}
+
+.card {
+    background-color: var(--gray-800);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.card-image {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-info .name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-info .location {
+    font-size: 14px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.jop {
+    font-size: 14px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.social-links li {
+    width: inherit;
+    text-align: center;
+    background-color: var(--gray-700);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.social-links li a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.social-links li a:hover,
+.social-links li a:focus-visible {
+    background-color: var(--green);
+    color: var(--gray-900);
+}
+
+/* =========== Footer =========== */
+.attribution {
+    position: relative;
+    bottom: 1rem;
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--green);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ============ Desktop ============ */
+@media (min-width: 768px) {
+    .card {
+        width: 385px;
+    }
+}
